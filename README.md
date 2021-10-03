@@ -8,6 +8,7 @@ Aprendiendo Grid Css
 - [Grid Explícita](#item1)
 - [Grid Explícita Posicionamiento](#item2)
 - [Grid con Nombres de Línea](#item3)
+- [Grid con Áreas](#item4)
 
 <a name="item1"></a>
 
@@ -182,6 +183,61 @@ Aprendiendo Grid Css
   grid-row: linea-r3 / linea-r4;
   grid-column: linea-c1 / linea-c4;
   /* grid-area: ; No funciona con grid line name*/
+}
+```
+
+[Subir](#top)
+<a name="item1"></a>
+
+### Grid con Áreas
+
+```html
+<section class="container grid-areas">
+  <header class="item header">
+    <h1>Header</h1>
+  </header>
+  <article class="item content">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, non
+      quaerat debitis impedit nesciunt voluptatem, odit maxime sed maiores
+      cupiditate cumque in consequatur quod dicta optio vel alias voluptatum
+      atque.
+    </p>
+  </article>
+  <aside class="item sidebar">
+    <p>Sidebar</p>
+  </aside>
+  <footer class="item footer">
+    <p>Footer</p>
+  </footer>
+</section>
+```
+
+> Css Grid con Áreas
+
+```css
+.grid-areas {
+  display: grid;
+  /* Grid 2cX3r */
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 100px repeat(2, 1fr) 60px;
+  grid-template-areas:
+    'header header'
+    'content sidebar'
+    'content .'
+    'footer footer';
+}
+.header {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.footer {
+  grid-area: footer;
 }
 ```
 

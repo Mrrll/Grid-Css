@@ -110,3 +110,26 @@ img {
      grid-column: linea-c1 / linea-c4;
      /* grid-area: ; No funciona con grid line name*/
 }
+.grid-areas{
+    display: grid;
+    /* Grid 2cX3r */
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 100px repeat(2, 1fr) 60px;
+    grid-template-areas:
+    "header header"
+    "content sidebar"
+    "content ."
+    "footer footer";
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+}

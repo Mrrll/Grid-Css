@@ -15,6 +15,7 @@ Aprendiendo Grid Css
 - [Grid Items en Capas (superposición)](#item8)
 - [Ordenamiento de Grid Items](#item9)
 - [Alineamiento de Grid Items](#item10)
+- [Alineamiento de Grid Tracks](#item11)
 
 <a name="item1"></a>
 
@@ -607,8 +608,7 @@ Aprendiendo Grid Css
 }
 ```
 
-> [Subir](#top)
-> <a name="item10"></a>
+> [Subir](#top) > <a name="item10"></a>
 
 ### Alineamiento de Grid Items
 
@@ -645,7 +645,47 @@ Aprendiendo Grid Css
 }
 .grid-align .item:nth-child(4) {
   justify-self: start;
-  align-items: center;
+  align-self: center;
+}
+```
+
+> [Subir](#top)
+
+<a name="item11"></a>
+
+### Alineamiento de Grid Tracks
+
+```html
+<section class="container grid-align-tracks">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Alineamiento de Grid Tracks
+
+```css
+.grid-align-tracks {
+  display: grid;
+  /* Grid de 3cX2r */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  /* Alineacion de las columnas y filas */
 }
 ```
 

@@ -413,7 +413,7 @@ Aprendiendo Grid Css
 ### Flujo de la Grid Dense
 
 ```html
-<section class="container grid-flow">
+<section class="container grid-flow-dense">
   <article class="item">
     <p>Item 1</p>
   </article>
@@ -475,19 +475,21 @@ Aprendiendo Grid Css
 ```
 
 > Css Flujo de la Grid Dense
+
 ```css
-.grid-flow-dense{
-    display: grid;
-    /* Grid de 5cX4r */
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 100px);
-    /* grid-auto-flow: row dense; */
-    grid-auto-flow: column dense;
+.grid-flow-dense {
+  display: grid;
+  /* Grid de 5cX4r */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  /* grid-auto-flow: row dense; */
+  grid-auto-flow: column dense;
 }
-.grid-flow-dense .item:nth-child(11){
-    color: cyan;
-    grid-row: span 3;
-    grid-column: span 3;
+.grid-flow-dense .item:nth-child(11) {
+  color: cyan;
+  grid-row: span 3;
+  grid-column: span 3;
 }
 ```
+
 > [Subir](#top)

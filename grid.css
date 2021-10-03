@@ -138,5 +138,15 @@ img {
     /* display: inline-grid; */ /* Compartir el espacio */
     /* Grid 4cX3r */
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 100px);
+}
+.grid-flow {
+    display: grid;
+    /* Grid de 5cX3r */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,100px);
+    grid-auto-flow: row; /* Cambia el flujo */
+    /* grid-auto-rows: 100px; */
+    grid-auto-columns: 50px; /* Items no explicitos */
+    grid-auto-flow: column;
 }

@@ -10,6 +10,7 @@ Aprendiendo Grid Css
 - [Grid con Nombres de Línea](#item3)
 - [Grid con Áreas](#item4)
 - [Grid Implícita](#item5)
+- [Flujo de la Grid](#item6)
 
 <a name="item1"></a>
 
@@ -311,13 +312,98 @@ Aprendiendo Grid Css
 ```
 
 > Css Grid Implícita
+
 ```css
-.grid-implicit{
-    display: grid;
-    /* display: inline-grid; */ /* Compartir el espacio */
-    /* Grid 4cX3r */
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3, 200px);
+.grid-implicit {
+  display: grid;
+  /* display: inline-grid; */ /* Compartir el espacio */
+  /* Grid 4cX3r */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
 }
 ```
+
+[Subir](#top)
+
+<a name="item6"></a>
+
+### Flujo de la Grid
+
+```html
+<section class="container grid-flow">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+  <article class="item">
+    <p>Item 6</p>
+  </article>
+  <article class="item">
+    <p>Item 7</p>
+  </article>
+  <article class="item">
+    <p>Item 8</p>
+  </article>
+  <article class="item">
+    <p>Item 9</p>
+  </article>
+  <article class="item">
+    <p>Item 10</p>
+  </article>
+  <article class="item">
+    <p>Item 11</p>
+  </article>
+  <article class="item">
+    <p>Item 12</p>
+  </article>
+  <article class="item">
+    <p>Item 13</p>
+  </article>
+  <article class="item">
+    <p>Item 14</p>
+  </article>
+  <article class="item">
+    <p>Item 15</p>
+  </article>
+  <article class="item">
+    <p>Item 16</p>
+  </article>
+  <article class="item">
+    <p>Item 17</p>
+  </article>
+  <article class="item">
+    <p>Item 18</p>
+  </article>
+  <article class="item">
+    <p>Item 19</p>
+  </article>
+</section>
+```
+
+> Css Flujo de la Grid
+
+```css
+.grid-flow {
+  display: grid;
+  /* Grid de 5cX3r */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-auto-flow: row; /* Cambia el flujo */
+  /* grid-auto-rows: 100px; */
+  grid-auto-columns: 50px; /* Items no explicitos */
+  grid-auto-flow: column;
+}
+```
+
 [Subir](#top)

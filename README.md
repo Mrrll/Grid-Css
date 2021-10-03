@@ -21,6 +21,7 @@ Aprendiendo Grid Css
 - [Grids Dinámicas](#item14)
 - [Responsive sin Media Queries](#item15)
 - [Grids Anidados](#item16)
+- [Subgrids](#item17)
 
 <a name="item1"></a>
 
@@ -1007,6 +1008,64 @@ Aprendiendo Grid Css
   padding: 1rem;
   border: medium solid #ccc;
   background-color: #ddd;
+}
+```
+
+> [Subir](#top)
+
+<a name="item17"></a>
+
+### Subgrids
+
+```html
+<section class="container grid">
+  <article class="item subgrid">
+    <div class="sub-item">
+      <p>Sub-Item 1</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 2</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 3</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 4</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 5</p>
+    </div>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Subgrids
+
+```css
+.grid{
+    display: grid;
+    /* Grid de 3cX2r */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.subgrid{
+    grid-column: span 3;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
 }
 ```
 

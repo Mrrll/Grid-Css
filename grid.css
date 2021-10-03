@@ -267,3 +267,13 @@ img {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap:1em;
 }
+.grid-nested{
+    display: grid;
+    /* Grid de 3cX?r */
+    grid-template-columns: repeat(3, 1fr)
+}
+.sub-item{
+    padding: 1rem;
+    border: medium solid #ccc;
+    background-color: #ddd;
+}

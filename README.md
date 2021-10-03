@@ -20,6 +20,7 @@ Aprendiendo Grid Css
 - [Grid con Patrones Repetitivos](#item13)
 - [Grids Dinámicas](#item14)
 - [Responsive sin Media Queries](#item15)
+- [Grids Anidados](#item16)
 
 <a name="item1"></a>
 
@@ -951,6 +952,61 @@ Aprendiendo Grid Css
   /* Grid de ?cX?r */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
+}
+```
+
+> [Subir](#top)
+
+<a name="item16"></a>
+
+### Grids Anidados
+
+```html
+<section class="container grid-nested">
+  <article class="item grid-nested">
+    <div class="sub-item">
+      <p>Sub-Item 1</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 2</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 3</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 4</p>
+    </div>
+    <div class="sub-item">
+      <p>Sub-Item 5</p>
+    </div>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Grids Anidados
+
+```css
+.grid-nested {
+  display: grid;
+  /* Grid de 3cX?r */
+  grid-template-columns: repeat(3, 1fr);
+}
+.sub-item {
+  padding: 1rem;
+  border: medium solid #ccc;
+  background-color: #ddd;
 }
 ```
 

@@ -7,6 +7,7 @@ Aprendiendo Grid Css
 
 - [Grid Explícita](#item1)
 - [Grid Explícita Posicionamiento](#item2)
+- [Grid con Nombres de Línea](#item3)
 
 <a name="item1"></a>
 
@@ -104,26 +105,83 @@ Aprendiendo Grid Css
 ### Grid Explícita Posicionamiento
 
 ```css
-.grid-explicit .item:nth-child(10){
-    color: red;
-    /* Posicionar celda */
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 2 / 2; /* grid-row-start / grid-row-end */
-    grid-column: 3 / 5; /* grid-column-start / grid-column-end */
-    grid-area: 2 / 3 / 3 / 5; /* grid-row-start / grid-row-end / grid-column-start / grid-column-end */
+.grid-explicit .item:nth-child(10) {
+  color: red;
+  /* Posicionar celda */
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 2 / 2; /* grid-row-start / grid-row-end */
+  grid-column: 3 / 5; /* grid-column-start / grid-column-end */
+  grid-area: 2 / 3 / 3 / 5; /* grid-row-start / grid-row-end / grid-column-start / grid-column-end */
 }
-.grid-explicit .item:nth-child(12){
-    color: cyan;
-    grid-row: span 2; /* expande y tantas filas */
-    grid-column: span 3; /* expande y tantas columnas */
+.grid-explicit .item:nth-child(12) {
+  color: cyan;
+  grid-row: span 2; /* expande y tantas filas */
+  grid-column: span 3; /* expande y tantas columnas */
 }
-.grid-explicit .item:nth-child(13){
-    color: teal;
-    grid-row: 1 / span 2; /* expande y tantas filas */
-    grid-column: 1 / span 2; /* expande y tantas columnas */
+.grid-explicit .item:nth-child(13) {
+  color: teal;
+  grid-row: 1 / span 2; /* expande y tantas filas */
+  grid-column: 1 / span 2; /* expande y tantas columnas */
+}
+```
+
+[Subir](#top)
+<a name="item3"></a>
+
+### Grid con Nombres de Línea
+
+```html
+<section class="container grid-line-names">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+  <article class="item">
+    <p>Item 6</p>
+  </article>
+  <article class="item">
+    <p>Item 7</p>
+  </article>
+  <article class="item">
+    <p>Item 8</p>
+  </article>
+  <article class="item">
+    <p>Item 9</p>
+  </article>
+</section>
+```
+
+> Css Grid con Nombres de Línea
+
+```css
+.grid-line-names {
+  display: grid;
+  /* Grid 3cX3r */
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4];
+  grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4];
+  grid-template-rows: [linea-r1] auto [linea-r2] auto [linea-r3] auto [linea-r4];
+}
+.grid-line-names .item:nth-child(3) {
+  color: teal;
+  grid-row: linea-r3 / linea-r4;
+  grid-column: linea-c1 / linea-c4;
+  /* grid-area: ; No funciona con grid line name*/
 }
 ```
 

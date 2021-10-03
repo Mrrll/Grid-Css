@@ -58,3 +58,19 @@ img {
   background-color: #666;
   border: medium solid #999;
 }
+/* Css Practicas */
+.grid-explicit{
+    display: grid;
+    /* Grid de 3columnasX3rows */
+    grid-template-columns: 50% 100px 1fr;
+    grid-template-rows: 2rem 20vh 30%;
+    /* Grid de 5cX4r */
+    grid-template-columns: repeat(5,20%); /* Iterador y Medida */
+    grid-template-rows: repeat(4,auto);
+    grid-template-columns: repeat(5,1fr); /* 1fr espacio disponible */
+    grid-template-rows: repeat(4,1fr);
+    /* Grid de 4cX5r */
+    grid-template-columns: 20% repeat(2,30%) 20%;
+    grid-template-rows: repeat(5,auto);
+    /* gap: 1em; */ /* espaciado entre filas y columnas */
+}

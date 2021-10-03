@@ -215,3 +215,15 @@ img {
 .grid-order .item:nth-child(5){
     order: 1;
 }
+.grid-align{
+    display: grid;
+    /* Grid de 3cX2r */
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    justify-items: center;
+    align-items: center;
+}
+.grid-align .item:nth-child(4){
+    justify-self: start;
+    align-items: center
+}

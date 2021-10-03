@@ -13,6 +13,7 @@ Aprendiendo Grid Css
 - [Flujo de la Grid](#item6)
 - [Flujo de la Grid Dense](#item7)
 - [Grid Items en Capas (superposición)](#item8)
+- [Ordenamiento de Grid Items](#item9)
 
 <a name="item1"></a>
 
@@ -493,8 +494,7 @@ Aprendiendo Grid Css
 }
 ```
 
-> [Subir](#top)
-> <a name="item8"></a>
+> [Subir](#top) > <a name="item8"></a>
 
 ### Grid Items en Capas (superposición)
 
@@ -551,6 +551,58 @@ Aprendiendo Grid Css
   background-color: teal;
   grid-column: 2 / 4;
   grid-row: 2 / 4;
+}
+```
+
+> [Subir](#top)
+
+<a name="item9"></a>
+
+### Ordenamiento de Grid Items
+
+```html
+<section class="container grid-order">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Ordenamiento de Grid Items
+
+```css
+.grid-order {
+  display: grid;
+  /* Grid de 3cX2r */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.grid-order .item:nth-child(1) {
+  order: 4;
+}
+.grid-order .item:nth-child(2) {
+  order: 5;
+}
+.grid-order .item:nth-child(3) {
+  order: 2;
+}
+.grid-order .item:nth-child(4) {
+  order: 3;
+}
+.grid-order .item:nth-child(5) {
+  order: 1;
 }
 ```
 

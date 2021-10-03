@@ -194,3 +194,24 @@ img {
     grid-column: 2 / 4;
     grid-row: 2 / 4;
 }
+.grid-order{
+    display: grid;
+    /* Grid de 3cX2r */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.grid-order .item:nth-child(1){
+    order: 4;
+}
+.grid-order .item:nth-child(2){
+    order: 5;
+}
+.grid-order .item:nth-child(3){
+    order: 2;
+}
+.grid-order .item:nth-child(4){
+    order: 3;
+}
+.grid-order .item:nth-child(5){
+    order: 1;
+}

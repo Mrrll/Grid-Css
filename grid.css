@@ -261,3 +261,9 @@ img {
     grid-template-columns: repeat(auto-fill, minmax(100px,1fr)); /* Ajusta el grid con los tracks */
     grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); /* Ajusta el grid con los tracks */
 }
+.grid-responsive{
+    display: grid;
+    /* Grid de ?cX?r */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap:1em;
+}

@@ -6,8 +6,7 @@ Aprendiendo Grid Css
 ## Índice de contenidos
 
 - [Grid Explícita](#item1)
-
-Lorem ipsum dolor
+- [Grid Explícita Posicionamiento](#item2)
 
 <a name="item1"></a>
 
@@ -96,6 +95,35 @@ Lorem ipsum dolor
   grid-template-columns: 20% repeat(2, 30%) 20%;
   grid-template-rows: repeat(5, auto);
   /* gap: 1em; */ /* espaciado entre filas y columnas */
+}
+```
+
+[Subir](#top)
+<a name="item2"></a>
+
+### Grid Explícita Posicionamiento
+
+```css
+.grid-explicit .item:nth-child(10){
+    color: red;
+    /* Posicionar celda */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 2 / 2; /* grid-row-start / grid-row-end */
+    grid-column: 3 / 5; /* grid-column-start / grid-column-end */
+    grid-area: 2 / 3 / 3 / 5; /* grid-row-start / grid-row-end / grid-column-start / grid-column-end */
+}
+.grid-explicit .item:nth-child(12){
+    color: cyan;
+    grid-row: span 2; /* expande y tantas filas */
+    grid-column: span 3; /* expande y tantas columnas */
+}
+.grid-explicit .item:nth-child(13){
+    color: teal;
+    grid-row: 1 / span 2; /* expande y tantas filas */
+    grid-column: 1 / span 2; /* expande y tantas columnas */
 }
 ```
 

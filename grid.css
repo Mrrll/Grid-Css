@@ -133,3 +133,10 @@ img {
 .footer{
     grid-area: footer;
 }
+.grid-implicit{
+    display: grid;
+    /* display: inline-grid; */ /* Compartir el espacio */
+    /* Grid 4cX3r */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 200px);
+}

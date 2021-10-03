@@ -9,6 +9,7 @@ Aprendiendo Grid Css
 - [Grid Explícita Posicionamiento](#item2)
 - [Grid con Nombres de Línea](#item3)
 - [Grid con Áreas](#item4)
+- [Grid Implícita](#item5)
 
 <a name="item1"></a>
 
@@ -241,4 +242,82 @@ Aprendiendo Grid Css
 }
 ```
 
+[Subir](#top)
+
+<a name="item5"></a>
+
+### Grid Implícita
+
+```html
+<section class="container grid-implicit">
+  <article class="item">
+    <p>item 1</p>
+  </article>
+  <article class="item">
+    <p>item 2</p>
+  </article>
+  <article class="item">
+    <p>item 3</p>
+  </article>
+  <article class="item">
+    <p>item 4</p>
+  </article>
+  <article class="item">
+    <p>item 5</p>
+  </article>
+  <article class="item">
+    <p>item 6</p>
+  </article>
+  <article class="item">
+    <p>item 7</p>
+  </article>
+  <article class="item">
+    <p>item 8</p>
+  </article>
+  <article class="item">
+    <p>item 9</p>
+  </article>
+  <article class="item">
+    <p>item 10</p>
+  </article>
+  <article class="item">
+    <p>item 11</p>
+  </article>
+  <article class="item">
+    <p>item 12</p>
+  </article>
+  <article class="item">
+    <p>item 13</p>
+  </article>
+  <article class="item">
+    <p>item 14</p>
+  </article>
+  <article class="item">
+    <p>item 15</p>
+  </article>
+  <article class="item">
+    <p>item 16</p>
+  </article>
+  <article class="item">
+    <p>item 17</p>
+  </article>
+  <article class="item">
+    <p>item 18</p>
+  </article>
+  <article class="item">
+    <p>item 19</p>
+  </article>
+</section>
+```
+
+> Css Grid Implícita
+```css
+.grid-implicit{
+    display: grid;
+    /* display: inline-grid; */ /* Compartir el espacio */
+    /* Grid 4cX3r */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 200px);
+}
+```
 [Subir](#top)

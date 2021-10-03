@@ -18,6 +18,7 @@ Aprendiendo Grid Css
 - [Alineamiento de Grid Tracks](#item11)
 - [Tamaños Máximos y Mínimos de Grid Tracks](#item12)
 - [Grid con Patrones Repetitivos](#item13)
+- [Grids Dinámicas](#item14)
 
 <a name="item1"></a>
 
@@ -821,6 +822,55 @@ Aprendiendo Grid Css
   grid-template-columns: repeat(1, 10% 20% 30% 40%);
   grid-template-rows: repeat(2, 50px 100px);
   grid-auto-rows: 100px;
+}
+```
+
+> [Subir](#top)
+
+<a name="item14"></a>
+
+### Grids Dinámicas
+
+```html
+<section class="container grid-dynamics">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Grids Dinámicas
+
+```css
+.grid-dynamics {
+  display: grid;
+  /* Grid de 4cX?r */
+  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(auto-fill, 100px); /* rellena el grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    100px
+  ); /* Ajusta el grid con los tracks */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  ); /* Ajusta el grid con los tracks */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /* Ajusta el grid con los tracks */
 }
 ```
 

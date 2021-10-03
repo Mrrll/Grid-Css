@@ -252,3 +252,12 @@ img {
     grid-template-rows: repeat(2, 50px 100px);
     grid-auto-rows: 100px;
 }
+.grid-dynamics{
+    display: grid;
+    /* Grid de 4cX?r */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(auto-fill, 100px); /* rellena el grid */
+    grid-template-columns: repeat(auto-fit, 100px); /* Ajusta el grid con los tracks */
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr)); /* Ajusta el grid con los tracks */
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); /* Ajusta el grid con los tracks */
+}

@@ -17,6 +17,7 @@ Aprendiendo Grid Css
 - [Alineamiento de Grid Items](#item10)
 - [Alineamiento de Grid Tracks](#item11)
 - [Tamaños Máximos y Mínimos de Grid Tracks](#item12)
+- [Grid con Patrones Repetitivos](#item13)
 
 <a name="item1"></a>
 
@@ -741,6 +742,85 @@ Aprendiendo Grid Css
     4,
     minmax(min-content, max-content)
   ); /* max-content Propiedad Constante  */
+}
+```
+
+> [Subir](#top) > <a name="item13"></a>
+
+### Grid con Patrones Repetitivos
+
+```html
+<section class="container grid-repeat">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+  <article class="item">
+    <p>Item 6</p>
+  </article>
+  <article class="item">
+    <p>Item 7</p>
+  </article>
+  <article class="item">
+    <p>Item 8</p>
+  </article>
+  <article class="item">
+    <p>Item 9</p>
+  </article>
+  <article class="item">
+    <p>Item 10</p>
+  </article>
+  <article class="item">
+    <p>Item 11</p>
+  </article>
+  <article class="item">
+    <p>Item 12</p>
+  </article>
+  <article class="item">
+    <p>Item 13</p>
+  </article>
+  <article class="item">
+    <p>Item 14</p>
+  </article>
+  <article class="item">
+    <p>Item 15</p>
+  </article>
+  <article class="item">
+    <p>Item 16</p>
+  </article>
+  <article class="item">
+    <p>Item 17</p>
+  </article>
+  <article class="item">
+    <p>Item 18</p>
+  </article>
+  <article class="item">
+    <p>Item 19</p>
+  </article>
+</section>
+```
+
+> Css Grid con Patrones Repetitivos
+
+```css
+.grid-repeat {
+  display: grid;
+  /* Grid de 4cX4r */
+  /* grid-template-columns: repeat(3, 10% 20% 30% 40%); */
+  grid-template-columns: repeat(1, 10% 20% 30% 40%);
+  grid-template-rows: repeat(2, 50px 100px);
+  grid-auto-rows: 100px;
 }
 ```
 

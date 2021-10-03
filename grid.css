@@ -244,3 +244,11 @@ img {
     grid-template-columns: repeat(4, minmax(100px, min-content)); /* min-content Propiedad Constante  */
     grid-template-columns: repeat(4, minmax(min-content,max-content)); /* max-content Propiedad Constante  */
 }
+.grid-repeat{
+    display: grid;
+    /* Grid de 4cX4r */
+    /* grid-template-columns: repeat(3, 10% 20% 30% 40%); */
+    grid-template-columns: repeat(1, 10% 20% 30% 40%);
+    grid-template-rows: repeat(2, 50px 100px);
+    grid-auto-rows: 100px;
+}

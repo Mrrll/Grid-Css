@@ -11,6 +11,7 @@ Aprendiendo Grid Css
 - [Grid con Áreas](#item4)
 - [Grid Implícita](#item5)
 - [Flujo de la Grid](#item6)
+- [Flujo de la Grid Dense](#item7)
 
 <a name="item1"></a>
 
@@ -401,9 +402,92 @@ Aprendiendo Grid Css
   grid-template-rows: repeat(3, 100px);
   grid-auto-flow: row; /* Cambia el flujo */
   /* grid-auto-rows: 100px; */
-  grid-auto-columns: 50px; /* Items no explicitos */
+  grid-auto-columns: 50px; /* Tamaños de Items no explicitos */
   grid-auto-flow: column;
 }
 ```
 
 [Subir](#top)
+<a name="item7"></a>
+
+### Flujo de la Grid Dense
+
+```html
+<section class="container grid-flow">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+  <article class="item">
+    <p>Item 6</p>
+  </article>
+  <article class="item">
+    <p>Item 7</p>
+  </article>
+  <article class="item">
+    <p>Item 8</p>
+  </article>
+  <article class="item">
+    <p>Item 9</p>
+  </article>
+  <article class="item">
+    <p>Item 10</p>
+  </article>
+  <article class="item">
+    <p>Item 11</p>
+  </article>
+  <article class="item">
+    <p>Item 12</p>
+  </article>
+  <article class="item">
+    <p>Item 13</p>
+  </article>
+  <article class="item">
+    <p>Item 14</p>
+  </article>
+  <article class="item">
+    <p>Item 15</p>
+  </article>
+  <article class="item">
+    <p>Item 16</p>
+  </article>
+  <article class="item">
+    <p>Item 17</p>
+  </article>
+  <article class="item">
+    <p>Item 18</p>
+  </article>
+  <article class="item">
+    <p>Item 19</p>
+  </article>
+</section>
+```
+
+> Css Flujo de la Grid Dense
+```css
+.grid-flow-dense{
+    display: grid;
+    /* Grid de 5cX4r */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    /* grid-auto-flow: row dense; */
+    grid-auto-flow: column dense;
+}
+.grid-flow-dense .item:nth-child(11){
+    color: cyan;
+    grid-row: span 3;
+    grid-column: span 3;
+}
+```
+> [Subir](#top)

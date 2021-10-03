@@ -16,6 +16,7 @@ Aprendiendo Grid Css
 - [Ordenamiento de Grid Items](#item9)
 - [Alineamiento de Grid Items](#item10)
 - [Alineamiento de Grid Tracks](#item11)
+- [Tamaños Máximos y Mínimos de Grid Tracks](#item12)
 
 <a name="item1"></a>
 
@@ -496,7 +497,8 @@ Aprendiendo Grid Css
 }
 ```
 
-> [Subir](#top) > <a name="item8"></a>
+> [Subir](#top) >
+> <a name="item8"></a>
 
 ### Grid Items en Capas (superposición)
 
@@ -686,6 +688,59 @@ Aprendiendo Grid Css
   justify-content: space-evenly;
   align-content: space-evenly;
   /* Alineacion de las columnas y filas */
+}
+```
+
+> [Subir](#top)
+
+<a name="item12"></a>
+
+### Tamaños Máximos y Mínimos de Grid Tracks
+
+```html
+<section class="container grid-min-max">
+  <article class="item">
+    <p>Item 1</p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus rem
+      earum autem quas tenetur, vero vel, eveniet dolores explicabo odit cumque
+      tempora porro suscipit eius deserunt ab quis, voluptates saepe.
+    </p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Tamaños Máximos y Mínimos de Grid Tracks
+
+```css
+.grid-min-max {
+  display: grid;
+  /* Grid de 4cX?r */
+  grid-template-columns: repeat(4, minmax(100px, 200px)); /* minimo y maximo */
+  grid-template-columns: repeat(
+    4,
+    minmax(min-content, 200px)
+  ); /* min-content Propiedad Constante  */
+  grid-template-columns: repeat(
+    4,
+    minmax(100px, min-content)
+  ); /* min-content Propiedad Constante  */
+  grid-template-columns: repeat(
+    4,
+    minmax(min-content, max-content)
+  ); /* max-content Propiedad Constante  */
 }
 ```
 

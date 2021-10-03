@@ -236,3 +236,11 @@ img {
     align-content:space-evenly;
     /* Alineacion de las columnas y filas */
 }
+.grid-min-max{
+    display: grid;
+    /* Grid de 4cX?r */
+    grid-template-columns: repeat(4, minmax(100px, 200px)); /* minimo y maximo */
+    grid-template-columns: repeat(4, minmax(min-content, 200px)); /* min-content Propiedad Constante  */
+    grid-template-columns: repeat(4, minmax(100px, min-content)); /* min-content Propiedad Constante  */
+    grid-template-columns: repeat(4, minmax(min-content,max-content)); /* max-content Propiedad Constante  */
+}

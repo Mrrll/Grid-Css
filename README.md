@@ -187,7 +187,7 @@ Aprendiendo Grid Css
 ```
 
 [Subir](#top)
-<a name="item1"></a>
+<a name="item4"></a>
 
 ### Grid con Áreas
 

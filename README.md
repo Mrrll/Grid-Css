@@ -12,6 +12,7 @@ Aprendiendo Grid Css
 - [Grid Implícita](#item5)
 - [Flujo de la Grid](#item6)
 - [Flujo de la Grid Dense](#item7)
+- [Grid Items en Capas (superposición)](#item8)
 
 <a name="item1"></a>
 
@@ -489,6 +490,67 @@ Aprendiendo Grid Css
   color: cyan;
   grid-row: span 3;
   grid-column: span 3;
+}
+```
+
+> [Subir](#top)
+> <a name="item8"></a>
+
+### Grid Items en Capas (superposición)
+
+```html
+<section class="container grid-layers">
+  <article class="item">
+    <p>Item 1</p>
+  </article>
+  <article class="item">
+    <p>Item 2</p>
+  </article>
+  <article class="item">
+    <p>Item 3</p>
+  </article>
+  <article class="item">
+    <p>Item 4</p>
+  </article>
+  <article class="item">
+    <p>Item 5</p>
+  </article>
+</section>
+```
+
+> Css Grid Items en Capas (superposición)
+
+```css
+.grid-layers {
+  display: grid;
+  /* Grid de 4cX4r */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.grid-layers .item:nth-child(1) {
+  background-color: yellow;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.grid-layers .item:nth-child(2) {
+  background-color: blue;
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+.grid-layers .item:nth-child(3) {
+  background-color: green;
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+}
+.grid-layers .item:nth-child(4) {
+  background-color: orange;
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+}
+.grid-layers .item:nth-child(5) {
+  background-color: teal;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
 }
 ```
 
